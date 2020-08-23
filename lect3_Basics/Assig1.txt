@@ -1,0 +1,118 @@
+Sohaib Yassin
+######Assignment 1 Lecture 3 (The Basics)####### 
+
+Ex1:
+
+#include <stdio.h>
+
+void main {
+
+	printf("C Programming"); }
+Ex2:
+
+#include <stdio.h>
+
+void main{
+	
+	int x;
+	printf("Enter a integer: \d");
+	scanf("%d",&x);
+	printf("You entered:%4d",x);
+}
+
+Ex3:
+
+#include <stdio.h>
+
+int main (){
+	
+	int x,y;
+	int sum;
+	printf("Enter two integers: \n");
+	scanf("%d %d", &x, &y);
+	
+	return printf("Sum: %d",sum=x+y); 
+
+
+}
+
+Ex4:
+
+#include <stdio.h>
+
+float main(){
+	
+	float x,y;
+	float Product;
+
+	printf("Enter the two numbers: \n");
+	scanf("%f %f",&x,&y);
+	return printf("Product: %f",Product=x*y);
+
+}
+
+Ex5:
+
+#include<stdio.h>
+
+void main (){
+
+	char x;
+	printf("Enter a character: \n");
+	scanf("%c",&x);
+	printf("ASCII value of %c = %d",x,x);
+
+
+}
+
+Ex6:
+
+#include <stdio.h>
+
+void main(){
+	
+	int a,b,temp;
+
+	printf("Enter value of a:\n");
+	scanf("%d",&a);
+	printf("Enter value of b:\n");
+	scanf("%d",&b);
+
+	temp=a;
+	a=b;
+	b=temp;
+
+	printf("After Swapping, value of a= %d\n",a);
+	printf("After Swapping, value of a= %d",b);
+}
+
+Ex7:
+
+
+#include <stdio.h>
+
+
+void main(){
+
+	int a,b;
+
+	printf("Enter value of a:\n");
+	scanf("%d",&a);
+	printf("Enter value of b:\n");
+	scanf("%d",&b);
+
+	a=a+b; // 2+3=5
+	b=a-b; // 5-3=2;
+	a=a-b; // 5-2=3;
+
+	printf("After Swapping, value of a= %d\n",a);
+	printf("After Swapping, value of a= %d",b);
+}
+
+
+
+
+
+
+
+
