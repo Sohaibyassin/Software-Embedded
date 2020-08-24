@@ -1,0 +1,130 @@
+
+Sohaib Yassin
+
+Assignment 2
+
+Ex1:
+
+#include <stdio.h>
+
+void main(){
+
+	int x;
+	printf("Enter an Integer you want to check: \n");
+	scanf("%d",&x);
+	if (x%2==0) printf("%d is Even",x);
+	else printf("%d is Odd",x);
+}
+
+Ex2:
+
+#include <stdio.h>
+
+void main(){
+		char x;
+		printf("Enter an alphabet:\n");
+		scanf("%c",&x);
+		switch(x){
+
+			case 'a':
+				 printf("%c is a vowel",x);
+				 break;
+			case 'e':
+				 printf("%c is a vowel",x);
+				 break;
+			case 'i':
+				 printf("%c is a vowel",x);
+				 break;
+			case 'o':
+				 printf("%c is a vowel",x);
+				 break;
+			case 'u':
+				 printf("%c is a vowel",x);
+				 break;
+			default:
+				 printf("%c is a consonant",x);
+				 break;}
+}
+
+Ex3:
+
+#include <stdio.h>
+void main(){
+
+	float x,y,z;
+	printf("Enter three numbers:\n");
+	scanf("%f %f %f", &x,&y,&z);
+
+	if (x>y && x>z){
+			printf("Largest number = %0.2f",x);
+			}
+	else if (y>x && y>z)
+			{
+			printf("Largest number = %0.2f",y);
+			}
+	else if (z>x && z>y)
+			{
+			printf("Largest number = %0.2f",z);
+			}
+	else {
+			printf("something is wrong");}
+
+			}
+
+Ex4:
+
+#include <stdio.h>
+
+void main(){
+
+	float x;
+	printf("Enter a number:\n");
+	scanf("%f",&x);
+
+	if (x>0) printf ("%0.2f is positive",x);
+	else if (x==0) printf("you entered zero");
+	else printf("%0.2f is negative",x);
+
+	}
+
+Ex5:
+
+#include<stdio.h>
+
+// The ASCII code for small alphabet range between 129 and 154 corresponding to 'a' and 'z'
+// The ASCII code for capital alphabet range between 97 and 122 corresponding to 'A'and 'Z'
+void main (){
+		char x;
+		printf("Enter the character:");
+		scanf("%c",&x);
+		if ((x>='a' && x<='z') || (x>='A' && x<='Z')) printf("%c is alphabet",x);
+		else printf("The entered character is not alphabet");
+		}
+
+Ex6:
+
+#include <stdio.h>
+
+void main (){
+
+		unsigned int x;
+		unsigned int sum=0;
+		unsigned n;
+		unsigned count=0;
+		printf("Enter the number of values to be added:\n");
+		scanf("%u",&n);
+
+		while(count+1<=n){
+			count++;
+			printf("Enter the %u integer:\n",count);
+			if (scanf("%u",&x)==0) printf("The entered value is not an integer");
+			sum+=x;}
+		printf("Sum = %u",sum);
+
+
+
+		}
+
+Ex7:
+
+
