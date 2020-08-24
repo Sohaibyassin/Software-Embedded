@@ -127,4 +127,25 @@ void main (){
 
 Ex7:
 
+#inlcude<stdio.h>
 
+void main(){
+
+		int x,xx=1;
+		printf("Enter an integer:\n");
+		if (scanf("%d",&x)==0) printf("your number is not an integer");
+
+		if (x<0) printf("Error!!! Factorial of negative number doesn't exist");
+		else if (x==0) printf ("The Factorial of 0 is 1 ");
+		else	{
+
+			  for (int i=x;i>0;i--) {
+
+						  xx*=i;
+
+
+			  	  	  	 }
+				}
+		printf("Factorial = %d\n",xx);
+
+			}
