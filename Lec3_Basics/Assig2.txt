@@ -149,3 +149,38 @@ void main(){
 		printf("Factorial = %d\n",xx);
 
 			}
+
+Ex8:
+
+#include <stdio.h>
+
+void main(){
+		char y;
+		float a,b;
+		printf("Enter the operator either + or - or * or /:");
+		scanf("%c",&y);
+		printf("Enter the two operands:");
+		scanf("%f %f",&a,&b);
+
+		switch(y){
+
+		case '+':
+			printf("%0.2f + %0.2f=%0.2f",a ,b,a+b);
+			break;
+		case '-':
+		    printf("%0.2f - %0.2f=%0.2f",a ,b,a-b);
+		    break;
+		case '*':
+			printf("%0.2f x %0.2f=%0.2f",a ,b,a*b);
+			break;
+		case '/':
+		        printf("%0.2f / %0.2f=%0.2f",a ,b,a/b);
+		        break;
+		default:
+			printf("You entered other operation than mentioned");
+			break;
+			 }
+
+
+		}
+
