@@ -1,0 +1,79 @@
+
+Ex1:
+
+
+#include <stdio.h>
+#include <stdint.h>
+
+void main (){
+
+		char arr[100],x,freq=0;
+
+		printf("Enter a string:\n");
+		gets(arr);
+
+		printf("Enter a character to find frequency\n");
+		scanf("%c",&x);
+
+		uint32_t len=0; // len is the lenght of the array
+		for(;arr[len]!=0;len++){
+			len+=1;
+		}
+
+
+		for(uint32_t i=0;i<len;i++){
+
+			if (arr[i]==x) freq+=1;
+		}
+
+
+		printf("%d",freq);
+	}
+
+Ex2:
+
+
+#include <stdio.h>
+#include <stdint.h>
+
+void main (){
+
+		char arr[100],i;
+
+		printf("Enter a string:\n");
+		gets(arr);
+
+		for (i=0; arr[i]!='\0';++i);
+		printf("Length of string: %d",i);
+
+
+
+	}
+Ex3:
+
+
+#include <stdio.h>
+#include <stdint.h>
+
+void main (){
+
+		char arr[100],i,temp,freq;
+
+		printf("Enter a string:\n");
+		gets(arr);
+		freq=strlen(arr);
+
+		for (i=0; i<freq/2;++i){
+			temp=arr[i];
+			arr[i]=arr[freq-i-1];
+
+			arr[freq-i-1]=temp;   ;
+
+		}
+		printf("%s",arr);
+
+
+
+	}
+
+
