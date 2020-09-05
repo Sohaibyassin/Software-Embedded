@@ -1,0 +1,226 @@
+
+
+Ex1:
+
+#include <stdio.h>
+
+
+void main (){
+
+
+	float m1[2][2];
+	float m2[2][2];
+	float sum[2][2];
+
+	printf("Enter the elements of the 1st matrix\n");
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+
+			printf("Enter m1-%d%d: ",i+1,j+1);
+			scanf("%f",&m1[i][j]);
+					}
+			}
+
+	printf("Enter the elements of the 2nd matrix\n");
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+
+			printf("Enter m2-%d%d: ",i+1,j+1);
+			scanf("%f",&m2[i][j]);
+					}
+			}
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+
+			sum[i][j]=m1[i][j]+ m2[i][j];
+					}
+	}
+	printf("Sum of the matrix\n");
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+
+			if (i==0){
+			 printf("%5.2f\t",sum[i][j]);
+			 	 if(i==0 && j==1)
+			 		 printf("\n");
+			}
+
+			else {
+
+			 printf(" %0.2f\t",sum[i][j]);
+					}
+
+						}
+				}
+
+}
+
+Ex2:
+
+#include <stdio.h>
+
+
+void main (){
+
+		printf("Enter the number of data:\n");
+		int num;
+		scanf("%d",&num);
+		float arr[num],sum=0,avg;
+
+		for (int i=0;i<num;i++)
+		{
+			printf("%d. Enter number:\n",i+1);
+			scanf("%f",&arr[i]);
+			sum+=arr[i];
+			avg=sum/num;
+
+		}
+		printf("Average = %f",avg);
+
+}
+
+Ex3:
+
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+void main (){
+
+		printf("Enter rows and column of matrix:\n");
+		int row,colmn;
+		scanf("%d %d",&row,&colmn);
+
+		float mat[row][colmn];
+
+		printf ("Enter elements of matrix\n");
+
+		for (uint32_t i=0;i<row;i++)
+		{
+			for(uint32_t j=0;j<colmn;j++)
+			{
+				printf("Enter elements a%d%d:\n",i+1,j+1);
+				scanf("%f",&mat[i][j]);
+			}
+
+
+		}
+		//printf("%d",sizeof(mat));
+		printf("Entered matrix:\n");
+
+		for (uint32_t i=0;i<row;i++)
+		{	printf("\n");
+			for(uint32_t j=0;j<colmn;j++)
+			{
+
+					printf("%f\t",mat[i][j]);
+
+				}
+
+			}
+
+printf("\n");
+// Traspose of the matrix
+	float trans[colmn][row];
+		for (uint32_t i=0;i<row;i++)
+		  {
+			for(uint32_t j=0;j<colmn;j++){
+
+				if (i==j) trans[i][j]=mat[i][j];
+				else {
+					trans[j][i]=mat[i][j];
+
+						}
+
+					}
+		}
+// Print of the Matrix transpose 
+		printf("Transpose matrix:\n");
+
+				for (uint32_t i=0;i<colmn;i++)
+				{	printf("\n");
+					for(uint32_t j=0;j<row;j++)
+					{
+
+
+						printf("%f\t",trans[i][j]);
+
+					}
+
+
+					}
+
+}
+
+Ex4:
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+void main (){
+
+		printf("Enter no of elements\n");
+		int num;
+		scanf("%d",&num);
+		int mat[num];
+
+		for (uint32_t i=0;i<num;i++){
+			printf(" enter %d:",i);
+			scanf("%d",&mat[i]);
+		}
+
+		printf("Enter the element to be inserted:\n");
+		int v_elem,loc;
+		scanf("%d",&v_elem);
+
+		printf("Enter the location:\n");
+		scanf("%d",&loc);
+
+		mat[6]=0;
+		for(uint32_t i=num;i>=loc;i--){
+
+
+			mat[num]=mat[i-1];
+		}
+
+		mat[loc-1]=v_elem;
+
+		int i=0;
+		while (i !=num+1){
+			printf("%d\t",mat[i++]);}
+}
+
+Ex5:
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+void main (){
+
+		printf("Enter no of elements:\n");
+		int num, element;
+		int arr[30];
+		scanf("%d",&num);
+
+		for (uint32_t i=0; i<num;i++){
+			scanf("%d",&arr[i]);
+
+					}
+		printf("Enter the elements to be searched:\n");
+		scanf("%d",&element);
+
+		uint32_t i=0;
+		for (; i<num && element!=arr[i];i++);
+
+			if (i<num)	{
+				printf("Number found at location =%d \n",i+1);}
+			else{
+				printf("Number is not inside");
+			}
+
+			}
+
+
